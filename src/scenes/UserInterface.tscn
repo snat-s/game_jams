@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/scenes/UserInterface.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Pixel Operator/PixelOperatorHB.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/Pixel Operator/ui_theme.tres" type="Theme" id=3]
+[ext_resource path="res://src/ui/Title.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/ui/QuitButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/ui/PlayButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/ui/RetryButton.tscn" type="PackedScene" id=7]
+
+[node name="UserInterface" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -180.113
+margin_top = 18.3242
+margin_right = 7.8869
+margin_bottom = 93.3242
+custom_fonts/font = ExtResource( 2 )
+text = "Score: %s
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0.266667 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="PauseOverlay" instance=ExtResource( 4 )]
+margin_left = -102.144
+margin_top = 113.627
+margin_right = 94.8559
+margin_bottom = 149.627
+
+[node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -133.0
+margin_top = -52.1587
+margin_right = 147.0
+margin_bottom = 65.8413
+
+[node name="RetryButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 7 )]
+margin_right = 280.0
+margin_bottom = 42.0
+
+[node name="MainScreenButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 6 )]
+margin_top = 46.0
+margin_right = 280.0
+margin_bottom = 88.0
+text = "Main Screen"
+next_scene_path_ = "res://src/scenes/MainScreen.tscn"
+
+[node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 5 )]
+margin_top = 92.0
+margin_right = 280.0
+margin_bottom = 134.0

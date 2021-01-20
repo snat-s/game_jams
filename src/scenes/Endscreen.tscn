@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/ui/Title.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/background_ui.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Pixel Operator/ui_theme.tres" type="Theme" id=3]
+[ext_resource path="res://src/ui/QuitButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/scenes/Endscreen.gd" type="Script" id=5]
+
+[node name="Endscreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background_ui" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1280.0
+margin_bottom = 600.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" parent="." instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -254.0
+margin_top = 160.5
+margin_right = -31.0
+margin_bottom = 199.5
+
+[node name="Score" parent="." instance=ExtResource( 1 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -168.5
+margin_top = -37.5
+margin_right = 168.5
+margin_bottom = 37.5
+text = "Your final score is %s
+You died %s"

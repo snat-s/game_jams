@@ -1,0 +1,194 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/TileMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/Enemy1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Tilemap_transparent/monochrome_tilemap_transparent_packed.png" type="Texture" id=4]
+[ext_resource path="res://src/objects/Door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Levels/Level 3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/objects/key.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/objects/Coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/mp3/bgm_action_1.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/scenes/UserInterface.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Pixel Operator/PixelOperatorHB.tres" type="DynamicFont" id=11]
+
+[sub_resource type="TileSet" id=1]
+0/name = "monochrome_tilemap_transparent_packed.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 256, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "monochrome_tilemap_transparent_packed.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 272, 16, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "monochrome_tilemap_transparent_packed.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 288, 16, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "monochrome_tilemap_transparent_packed.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 256, 16, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "monochrome_tilemap_transparent_packed.png 4"
+4/texture = ExtResource( 4 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 288, 0, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "monochrome_tilemap_transparent_packed.png 5"
+5/texture = ExtResource( 4 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 224, 0, 16, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "monochrome_tilemap_transparent_packed.png 6"
+6/texture = ExtResource( 4 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 208, 32, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [ 1024.0 ]
+}
+
+[node name="Coin" parent="." instance=ExtResource( 8 )]
+position = Vector2( 896, 120 )
+
+[node name="Coin2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 552, 112 )
+
+[node name="Coin3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 488, 160 )
+
+[node name="Coin4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 216, 152 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 88 )
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2.29764, 63.5916 )
+tile_data = PoolIntArray( -262144, 2, 0, -262143, 2, 2, -262082, 2, 0, -262081, 2, 2, -196608, 2, 65536, -196607, 2, 65538, -196546, 2, 65536, -196545, 2, 65538, -131072, 2, 65536, -131071, 2, 65538, -131010, 2, 65536, -131009, 2, 65538, -65536, 2, 65536, -65535, 2, 65538, -65474, 2, 65536, -65473, 2, 65538, 0, 2, 65536, 1, 2, 65538, 62, 2, 65536, 63, 2, 65538, 65536, 2, 65536, 65537, 2, 65538, 65598, 2, 65536, 65599, 2, 65538, 131072, 2, 65536, 131073, 2, 65538, 131134, 2, 65536, 131135, 2, 65538, 196608, 2, 65536, 196609, 2, 65538, 196646, 2, 0, 196647, 2, 1, 196648, 2, 2, 196670, 2, 65536, 196671, 2, 65538, 262144, 2, 65536, 262145, 2, 65538, 262149, 2, 0, 262150, 2, 1, 262151, 2, 2, 262182, 2, 131072, 262183, 2, 131073, 262184, 2, 131074, 262203, 2, 0, 262204, 2, 1, 262205, 2, 1, 262206, 2, 1, 262207, 2, 65538, 327680, 2, 65536, 327681, 2, 65538, 327685, 2, 131072, 327686, 2, 131073, 327687, 2, 131074, 327739, 2, 131072, 327740, 2, 131073, 327741, 2, 131073, 327742, -1073741822, 65537, 327743, 2, 65538, 393216, 2, 65536, 393217, 2, 65538, 393227, 2, 0, 393228, 2, 1, 393229, 2, 2, 393278, 2, 65536, 393279, 2, 65538, 458752, 2, 65536, 458753, 2, 65538, 458763, 2, 131072, 458764, 2, 131073, 458765, 2, 131074, 458780, 2, 0, 458781, 2, 1, 458782, 2, 1, 458783, 2, 2, 458804, 2, 0, 458805, 2, 1, 458806, 2, 1, 458807, 2, 2, 458814, 2, 65536, 458815, 2, 65538, 524288, 2, 65536, 524289, 2, 65538, 524316, 2, 65536, 524317, 2, 65537, 524318, 2, 65537, 524319, 2, 65538, 524340, 2, 65536, 524341, 2, 65537, 524342, 2, 65537, 524343, 2, 65538, 524350, 2, 65536, 524351, 2, 65538, 589824, 2, 65536, 589825, 2, 65538, 589852, 2, 131072, 589853, 2, 131073, 589854, 2, 131073, 589855, 2, 131074, 589868, 2, 0, 589869, 2, 1, 589870, 2, 2, 589876, 2, 131072, 589877, 2, 131073, 589878, 2, 131073, 589879, 2, 131074, 589886, 2, 65536, 589887, 2, 65538, 655360, 2, 65536, 655361, 2, 65538, 655378, 2, 0, 655379, 2, 2, 655382, 2, 0, 655383, 2, 2, 655404, 2, 131072, 655405, 2, 131073, 655406, 2, 131074, 655422, 2, 65536, 655423, 2, 65538, 720896, 2, 65536, 720897, 2, 65538, 720914, 2, 65536, 720915, 2, 1, 720916, 2, 1, 720917, 2, 1, 720918, 2, 1, 720919, 2, 65538, 720958, 2, 65536, 720959, 2, 65538, 786432, 2, 65536, 786433, 2, 65538, 786450, 2, 131072, 786451, 2, 131073, 786452, 2, 131073, 786453, 2, 131073, 786454, 2, 131073, 786455, 2, 131074, 786494, 2, 65536, 786495, 2, 65538, 851968, 2, 65536, 851969, 2, 65538, 851982, 2, 0, 851983, 2, 2, 852030, 2, 65536, 852031, 2, 65538, 917504, 2, 65536, 917505, 2, 65538, 917518, 2, 131072, 917519, 2, 131074, 917566, 2, 65536, 917567, 2, 65538, 983040, 2, 65536, 983041, 2, 65538, 983102, 2, 65536, 983103, 2, 65538, 1048576, 2, 65536, 1048577, 2, 65538, 1048583, 2, 0, 1048584, 2, 1, 1048585, 2, 1, 1048586, 2, 2, 1048638, 2, 65536, 1048639, 2, 65538, 1114112, 2, 65536, 1114113, 2, 65538, 1114119, 2, 131072, 1114120, 2, 131073, 1114121, 2, 131073, 1114122, 2, 131074, 1114148, 2, 0, 1114149, 2, 1, 1114150, 2, 1, 1114151, 2, 2, 1114174, 2, 65536, 1114175, 2, 65538, 1179648, 2, 65536, 1179649, 2, 65538, 1179684, 2, 65536, 1179685, 2, 65537, 1179686, 2, 65537, 1179687, 2, 65538, 1179710, 2, 65536, 1179711, 2, 65538, 1245184, 2, 65536, 1245185, 2, 65538, 1245220, 2, 131072, 1245221, 2, 131073, 1245222, 2, 131073, 1245223, 2, 131074, 1245246, 2, 65536, 1245247, 2, 65538, 1310720, 2, 65536, 1310721, 2, 65538, 1310723, 2, 0, 1310724, 2, 2, 1310782, 2, 65536, 1310783, 2, 65538, 1376256, 2, 65536, 1376257, 2, 65538, 1376259, 2, 131072, 1376260, 2, 131074, 1376318, 2, 65536, 1376319, 2, 65538, 1441792, 2, 65536, 1441793, 2, 65538, 1441854, 2, 65536, 1441855, 2, 65538, 1507328, 2, 65536, 1507329, 2, 65538, 1507390, 2, 65536, 1507391, 2, 65538, 1572864, 2, 65536, 1572865, 2, 1, 1572866, 2, 1, 1572867, 2, 1, 1572868, 2, 1, 1572869, 2, 1, 1572870, 2, 1, 1572871, 2, 1, 1572872, 2, 1, 1572873, 2, 1, 1572874, 2, 1, 1572875, 2, 1, 1572876, 2, 1, 1572877, 2, 1, 1572878, 2, 1, 1572879, 2, 1, 1572880, 2, 1, 1572881, 2, 1, 1572882, 2, 1, 1572883, 2, 1, 1572884, 2, 1, 1572885, 2, 1, 1572886, 2, 1, 1572887, 2, 1, 1572888, 2, 1, 1572889, 2, 1, 1572890, 2, 1, 1572891, 2, 1, 1572892, 2, 1, 1572893, 2, 1, 1572894, 2, 1, 1572895, 2, 1, 1572896, 2, 1, 1572897, 2, 1, 1572898, 2, 1, 1572899, 2, 1, 1572900, 2, 1, 1572901, 2, 1, 1572902, 2, 1, 1572903, 2, 1, 1572904, 2, 1, 1572905, 2, 1, 1572906, 2, 1, 1572907, 2, 1, 1572908, 2, 1, 1572909, 2, 1, 1572910, 2, 1, 1572911, 2, 1, 1572912, 2, 1, 1572913, 2, 1, 1572914, 2, 1, 1572915, 2, 1, 1572916, 2, 1, 1572917, 2, 1, 1572918, 2, 1, 1572919, 2, 1, 1572920, 2, 1, 1572921, 2, 1, 1572922, 2, 1, 1572923, 2, 1, 1572924, 2, 1, 1572925, 2, 1, 1572926, 2, 1, 1572927, 2, 65538, 1638400, 2, 131072, 1638401, 2, 131073, 1638402, 2, 131073, 1638403, 2, 131073, 1638404, 2, 131073, 1638405, 2, 131073, 1638406, 2, 131073, 1638407, 2, 131073, 1638408, 2, 131073, 1638409, 2, 131073, 1638410, 2, 131073, 1638411, 2, 131073, 1638412, 2, 131073, 1638413, 2, 131073, 1638414, 2, 131073, 1638415, 2, 131073, 1638416, 2, 131073, 1638417, 2, 131073, 1638418, 2, 131073, 1638419, 2, 131073, 1638420, 2, 131073, 1638421, 2, 131073, 1638422, 2, 131073, 1638423, 2, 131073, 1638424, 2, 131073, 1638425, 2, 131073, 1638426, 2, 131073, 1638427, 2, 131073, 1638428, 2, 131073, 1638429, 2, 131073, 1638430, 2, 131073, 1638431, 2, 131073, 1638432, 2, 131073, 1638433, 2, 131073, 1638434, 2, 131073, 1638435, 2, 131073, 1638436, 2, 131073, 1638437, 2, 131073, 1638438, 2, 131073, 1638439, 2, 131073, 1638440, 2, 131073, 1638441, 2, 131073, 1638442, 2, 131073, 1638443, 2, 131073, 1638444, 2, 131073, 1638445, 2, 131073, 1638446, 2, 131073, 1638447, 2, 131073, 1638448, 2, 131073, 1638449, 2, 131073, 1638450, 2, 131073, 1638451, 2, 131073, 1638452, 2, 131073, 1638453, 2, 131073, 1638454, 2, 131073, 1638455, 2, 131073, 1638456, 2, 131073, 1638457, 2, 131073, 1638458, 2, 131073, 1638459, 2, 131073, 1638460, 2, 131073, 1638461, 2, 131073, 1638462, 2, 131073, 1638463, 2, 131074 )
+
+[node name="Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 344, 240 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 736, 208 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 8
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 393222, 5, 0, 393255, 3, 0, 589836, 6, 0, 655388, 4, 0, 655390, 2, 0, 655413, 2, 0, 655414, 1, 0, 786476, 1, 0, 851990, 0, 0, 1048591, 4, 0, 1245193, 3, 0, 1245223, 5, 0, 1310758, 3, 0, 1507331, 2, 0, 1703945, 5, 0, 1703988, 5, 0, 1769492, 2, 0, 1769506, 6, 0, 1769517, 4, 0, 1769520, 3, 0, 1769530, 6, 0 )
+
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 968, 128 )
+next_scene = ExtResource( 6 )
+
+[node name="ColorRect" parent="Door/CanvasLayer" index="0"]
+visible = false
+
+[node name="key" parent="." instance=ExtResource( 7 )]
+position = Vector2( 648, 96 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 9 )
+autoplay = true
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+
+[node name="UserInterface" type="Control" parent="UserInterface"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UserInterface/UserInterface"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -210.419
+margin_top = 29.5488
+margin_right = -22.4195
+margin_bottom = 104.549
+custom_fonts/font = ExtResource( 11 )
+text = "Score: %s
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[editable path="Door"]

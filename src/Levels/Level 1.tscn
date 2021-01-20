@@ -1,0 +1,254 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/TileMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Tilemap_transparent/monochrome_tilemap_transparent_packed.png" type="Texture" id=3]
+[ext_resource path="res://src/objects/Coin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/Enemy1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/objects/Door.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Levels/Level 2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/objects/key.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/scenes/UserInterface.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/mp3/bgm_action_1.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Pixel Operator/ui_theme.tres" type="Theme" id=11]
+[ext_resource path="res://src/Actors/Spikes.tscn" type="PackedScene" id=12]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "monochrome_tilemap_transparent_packed.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 256, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "monochrome_tilemap_transparent_packed.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 224, 0, 16, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "monochrome_tilemap_transparent_packed.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 256, 16, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "monochrome_tilemap_transparent_packed.png 3"
+3/texture = ExtResource( 3 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 288, 0, 32, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "monochrome_tilemap_transparent_packed.png 4"
+4/texture = ExtResource( 3 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 96, 144, 16, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "monochrome_tilemap_transparent_packed.png 5"
+5/texture = ExtResource( 3 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 272, 160, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 1 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+
+[node name="Level 1" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 25.06, -136.0, -112.0 ],
+"_edit_vertical_guides_": [ 1008.0, 1008.0, 1016.0, 1010.33 ]
+}
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="UserInterface" parent="UserInterface" instance=ExtResource( 9 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 72, 80 )
+
+[node name="Camera2D" parent="Player" index="2"]
+limit_right = 1010
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2.29764, 63.5916 )
+tile_data = PoolIntArray( -262083, 2, 0, -262082, 2, 2, -196547, 2, 65536, -196546, 2, 65538, -131011, 2, 65536, -131010, 2, 65538, -65475, 2, 65536, -65474, 2, 65538, 61, 2, 65536, 62, 2, 65538, 131071, 2, 0, 65536, 2, 2, 65597, 2, 65536, 65598, 2, 65538, 196607, 2, 65536, 131072, 2, 65538, 131133, 2, 65536, 131134, 2, 65538, 262143, 2, 65536, 196608, 2, 65538, 196669, 2, 65536, 196670, 2, 65538, 327679, 2, 65536, 262144, 2, 65538, 262205, 2, 65536, 262206, 2, 65538, 393215, 2, 65536, 327680, 2, 65538, 327741, 2, 65536, 327742, 2, 65538, 458751, 2, 65536, 393216, 2, 65538, 393277, 2, 65536, 393278, 2, 65538, 524287, 2, 65536, 458752, 2, 65538, 458813, 2, 65536, 458814, 2, 65538, 589823, 2, 65536, 524288, 2, 65538, 524349, 2, 65536, 524350, 2, 65538, 655359, 2, 65536, 589824, 2, 65538, 589885, 2, 65536, 589886, 2, 65538, 720895, 2, 65536, 655360, 2, 65538, 655421, 2, 65536, 655422, 2, 65538, 786431, 2, 65536, 720896, 2, 65538, 720957, 2, 65536, 720958, 2, 65538, 851967, 2, 65536, 786432, 2, 65538, 786493, 2, 65536, 786494, 2, 65538, 917503, 2, 65536, 851968, 2, 65538, 852029, 2, 65536, 852030, 2, 65538, 983039, 2, 65536, 917504, 2, 65538, 917565, 2, 65536, 917566, 2, 65538, 1048575, 2, 65536, 983040, 2, 65538, 983043, 2, 0, 983044, 2, 1, 983045, 2, 2, 983101, 2, 65536, 983102, 2, 65538, 1114111, 2, 65536, 1048576, 2, 65538, 1048579, 2, 131072, 1048580, 2, 131073, 1048581, 2, 131074, 1048637, 2, 65536, 1048638, 2, 65538, 1179647, 2, 65536, 1114112, 2, 65538, 1114173, 2, 65536, 1114174, 2, 65538, 1245183, 2, 65536, 1179648, 2, 65538, 1179709, 2, 65536, 1179710, 2, 65538, 1310719, 2, 65536, 1245184, 2, 65538, 1245245, 2, 65536, 1245246, 2, 65538, 1376255, 2, 65536, 1310720, 2, 65538, 1310781, 2, 65536, 1310782, 2, 65538, 1441791, 2, 65536, 1376256, 2, 65538, 1376317, 2, 65536, 1376318, 2, 65538, 1507327, 2, 65536, 1441792, 2, 65538, 1441853, 2, 65536, 1441854, 2, 65538, 1572863, 2, 65536, 1507328, 2, 65538, 1507386, 2, 0, 1507387, 2, 1, 1507388, 2, 1, 1507389, 2, 1, 1507390, 2, 65538, 1638399, 2, 65536, 1572864, 2, 65538, 1572875, 2, 0, 1572876, 2, 1, 1572877, 2, 2, 1572888, 2, 0, 1572889, 2, 1, 1572890, 2, 2, 1572908, 2, 0, 1572909, 2, 1, 1572910, 2, 2, 1572922, 2, 65536, 1572923, 2, 65537, 1572924, 2, 65537, 1572925, 2, 65537, 1572926, 2, 65538, 1703935, 2, 65536, 1638400, 2, 1, 1638401, 2, 1, 1638402, 2, 1, 1638403, 2, 1, 1638404, 2, 1, 1638405, 2, 1, 1638406, 2, 1, 1638407, 2, 1, 1638408, 2, 1, 1638409, 2, 1, 1638410, 2, 1, 1638411, 2, 1, 1638412, 2, 65537, 1638413, 2, 1, 1638414, 2, 1, 1638415, 2, 1, 1638416, 2, 1, 1638417, 2, 1, 1638418, 2, 1, 1638419, 2, 1, 1638420, 2, 1, 1638421, 2, 1, 1638422, 2, 1, 1638423, 2, 1, 1638424, 2, 1, 1638425, 2, 65537, 1638426, 2, 1, 1638427, 2, 2, 1638430, 2, 0, 1638431, 2, 1, 1638432, 2, 1, 1638433, 2, 1, 1638434, 2, 1, 1638435, 2, 1, 1638436, 2, 1, 1638437, 2, 1, 1638438, 2, 1, 1638439, 2, 1, 1638440, 2, 1, 1638441, 2, 1, 1638442, 2, 1, 1638443, 2, 1, 1638444, 2, 1, 1638445, 2, 65537, 1638446, 2, 1, 1638447, 2, 1, 1638448, 2, 1, 1638449, 2, 1, 1638450, 2, 1, 1638451, 2, 1, 1638452, 2, 1, 1638453, 2, 1, 1638454, 2, 1, 1638455, 2, 2, 1638458, 2, 65536, 1638459, 2, 65537, 1638460, 2, 65537, 1638461, 2, 65537, 1638462, 2, 65538, 1769471, 2, 131072, 1703936, 2, 131073, 1703937, 2, 131073, 1703938, 2, 131073, 1703939, 2, 131073, 1703940, 2, 131073, 1703941, 2, 131073, 1703942, 2, 131073, 1703943, 2, 131073, 1703944, 2, 131073, 1703945, 2, 131073, 1703946, 2, 131073, 1703947, 2, 131073, 1703948, 2, 131073, 1703949, 2, 131073, 1703950, 2, 131073, 1703951, 2, 131073, 1703952, 2, 131073, 1703953, 2, 131073, 1703954, 2, 131073, 1703955, 2, 131073, 1703956, 2, 131073, 1703957, 2, 131073, 1703958, 2, 131073, 1703959, 2, 131073, 1703960, 2, 131073, 1703961, 2, 131073, 1703962, 2, 131073, 1703963, 2, 131074, 1703966, 2, 131072, 1703967, 2, 131073, 1703968, 2, 131073, 1703969, 2, 131073, 1703970, 2, 131073, 1703971, 2, 131073, 1703972, 2, 131073, 1703973, 2, 131073, 1703974, 2, 131073, 1703975, 2, 131073, 1703976, 2, 131073, 1703977, 2, 131073, 1703978, 2, 131073, 1703979, 2, 131073, 1703980, 2, 131073, 1703981, 2, 131073, 1703982, 2, 131073, 1703983, 2, 131073, 1703984, 2, 131073, 1703985, 2, 131073, 1703986, 2, 131073, 1703987, 2, 131073, 1703988, 2, 131073, 1703989, 2, 131073, 1703990, 2, 131073, 1703991, 2, 131074, 1703994, 2, 65536, 1703995, 2, 65537, 1703996, 2, 65537, 1703997, 2, 65537, 1703998, 2, 65538, 1769530, 2, 131072, 1769531, 2, 131073, 1769532, 2, 131073, 1769533, 2, 131073, 1769534, 2, 131074 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+position = Vector2( 2.29764, 63.5916 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 8
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 917509, 0, 0, 1507330, 1, 0, 1507340, 2, 0, 1572868, 0, 0, 1572884, 2, 0, 1572895, 3, 0, 1572903, 2, 0, 1572917, 3, 0 )
+
+[node name="Door" parent="." instance=ExtResource( 6 )]
+position = Vector2( 952, 432 )
+next_scene = ExtResource( 7 )
+
+[node name="ColorRect" parent="Door/CanvasLayer" index="0"]
+visible = false
+
+[node name="Coin2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 288, 448 )
+
+[node name="Coin3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 408, 440 )
+
+[node name="Coin4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 568, 456 )
+
+[node name="Coin5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 656, 456 )
+
+[node name="Coin6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 904, 432 )
+
+[node name="key" parent="." instance=ExtResource( 8 )]
+position = Vector2( 728, 432 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 10 )
+volume_db = -3.0
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 640.0
+margin_top = 88.0
+margin_right = 954.0
+margin_bottom = 124.0
+theme = ExtResource( 11 )
+text = "Coins make you jump."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 416.0
+margin_top = 240.0
+margin_right = 730.0
+margin_bottom = 315.0
+theme = ExtResource( 11 )
+text = "Get the key to pass
+ to the next level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 704.0
+margin_top = 352.0
+margin_right = 1018.0
+margin_bottom = 388.0
+theme = ExtResource( 11 )
+text = "Have fun and RUN!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 88.0
+margin_top = 184.0
+margin_right = 327.0
+margin_bottom = 259.0
+theme = ExtResource( 11 )
+text = "Move with 
+arrows or wasd."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spikes" parent="." instance=ExtResource( 12 )]
+position = Vector2( 474.077, 495.416 )
+
+[node name="Spikes2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 457.641, 495.416 )
+
+[node name="Spikes3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 922.889, 494.472 )
+
+[node name="Spikes4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 906.454, 494.472 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 320.851, 453.013 )
+
+[editable path="Player"]
+
+[editable path="Door"]
